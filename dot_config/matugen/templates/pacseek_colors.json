@@ -1,0 +1,15 @@
+{
+    "Transparent": true,
+    "Accent": "{{colors.primary.default.hex_stripped}}",
+    "Title": "{{colors.on_primary_container.default.hex_stripped}}",
+    "SearchBar": "{{colors.surface_container_high.default.hex_stripped}}",
+    "PackagelistSourceRepository": "{{colors.tertiary.default.hex_stripped}}",
+    "PackagelistSourceAUR": "{{colors.primary.default.hex_stripped}}",
+    "PackagelistHeader": "{{colors.secondary.default.hex_stripped}}",
+    "SettingsFieldBackground": "{{colors.surface_container.default.hex_stripped}}",
+    "SettingsFieldText": "{{colors.on_surface.default.hex_stripped}}",
+    "SettingsFieldLabel": "{{colors.secondary.default.hex_stripped}}",
+    "SettingsDropdownNotSelected": "{{colors.outline.default.hex_stripped}}",
+    "StylePKGBUILD": "dracula",
+    "Comments": "Generated via Matugen - Examples for StylePKGBUILD: https://xyproto.github.io/splash/docs/all.html"
+}

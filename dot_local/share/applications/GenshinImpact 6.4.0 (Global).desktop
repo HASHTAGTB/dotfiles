@@ -1,0 +1,8 @@
+[Desktop Entry]
+Categories=Game;
+Comment=Launch this game using TwintailLauncher
+Exec=twintaillauncher --install=okf5exry2jbus95oww3hdndr
+Icon=twintaillauncher
+Name=GenshinImpact 6.4.0 (Global)
+Terminal=false
+Type=Application

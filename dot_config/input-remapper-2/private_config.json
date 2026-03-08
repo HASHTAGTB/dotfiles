@@ -1,0 +1,7 @@
+{
+    "version": "2.2.0",
+    "autoload": {
+        "ROCCAT ROCCAT Burst Pro": "mouse",
+        "Sharkoon Technologies Sharkoon SKILLER SGK30": "new preset"
+    }
+}

@@ -1,0 +1,8 @@
+
+[Desktop Entry]
+Type=Application
+Name=Affinity
+Icon=lutris_affinity-studio
+Exec=env LUTRIS_SKIP_INIT=1 lutris lutris:rungameid/3
+Categories=Game
+TryExec=lutris

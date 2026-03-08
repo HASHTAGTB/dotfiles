@@ -1,0 +1,15 @@
+{
+    "Transparent": true,
+    "Accent": "c9bfff",
+    "Title": "e5deff",
+    "SearchBar": "2b292f",
+    "PackagelistSourceRepository": "edb8cd",
+    "PackagelistSourceAUR": "c9bfff",
+    "PackagelistHeader": "c9c3dc",
+    "SettingsFieldBackground": "201f25",
+    "SettingsFieldText": "e5e1e9",
+    "SettingsFieldLabel": "c9c3dc",
+    "SettingsDropdownNotSelected": "938f99",
+    "StylePKGBUILD": "dracula",
+    "Comments": "Generated via Matugen - Examples for StylePKGBUILD: https://xyproto.github.io/splash/docs/all.html"
+}

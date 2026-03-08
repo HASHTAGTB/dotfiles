@@ -1,0 +1,47 @@
+# Syntax Highlighting (Catppuccin Mocha)
+color-link identifier "#89B4FA" 
+color-link identifier.class "#89B4FA" 
+color-link identifier.var "#89B4FA" 
+
+color-link constant "#FAB387" 
+color-link constant.number "#FAB387" 
+color-link constant.string "#A6E3A1" 
+
+color-link symbol "#F5C2E7" 
+color-link symbol.brackets "#F2CDCD" 
+color-link symbol.tag "#89B4FA" 
+
+color-link type "#89B4FA" 
+color-link type.keyword "#F9E2AF" 
+
+color-link special "#F5C2E7" 
+color-link statement "#CBA6F7" 
+color-link preproc "#F5C2E7" 
+
+color-link underlined "#89DCEB" 
+color-link error "bold #F38BA8" 
+color-link todo "bold #F9E2AF" 
+
+# UI and Editor Elements (Matugen)
+color-link default "{{ colors.on_surface.default.hex }}" 
+color-link comment "{{ colors.outline.default.hex }}"
+color-link selection "{{ colors.on_primary_container.default.hex }},{{ colors.primary_container.default.hex }}"
+color-link hlsearch "{{ colors.secondary.default.hex }}"
+
+color-link diff-added "{{ colors.secondary.default.hex }}"
+color-link diff-modified "{{ colors.tertiary.default.hex }}"
+color-link diff-deleted "{{ colors.error.default.hex }}" 
+
+color-link gutter-error "{{ colors.error.default.hex }}"
+color-link gutter-warning "{{ colors.tertiary.default.hex }}"
+
+color-link scrollbar "{{ colors.on_surface_variant.default.hex }}"
+color-link statusline "{{ colors.on_surface.default.hex }},{{ colors.surface.default.hex }}"
+color-link tabbar "{{ colors.on_surface.default.hex }},{{ colors.surface.default.hex }}"
+color-link indent-char "{{ colors.surface_variant.default.hex }}"
+color-link line-number "{{ colors.outline_variant.default.hex }}"
+color-link current-line-number "{{ colors.primary.default.hex }}"
+
+color-link cursor-line "{{ colors.background.default.hex }},{{ colors.on_surface.default.hex }}"
+color-link color-column "{{ colors.surface_variant.default.hex }}"
+color-link type.extended "default"

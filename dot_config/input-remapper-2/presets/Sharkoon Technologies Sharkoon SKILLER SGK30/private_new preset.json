@@ -1,0 +1,31 @@
+[
+    {
+        "input_combination": [
+            {
+                "type": 1,
+                "code": 58,
+                "origin_hash": "86c2020c1e5f38276e60822cd69d704d"
+            }
+        ],
+        "target_uinput": "keyboard",
+        "output_symbol": "KEY_F10",
+        "mapping_type": "key_macro"
+    },
+    {
+        "input_combination": [
+            {
+                "type": 1,
+                "code": 97,
+                "origin_hash": "86c2020c1e5f38276e60822cd69d704d"
+            },
+            {
+                "type": 1,
+                "code": 82,
+                "origin_hash": "86c2020c1e5f38276e60822cd69d704d"
+            }
+        ],
+        "target_uinput": "keyboard",
+        "output_symbol": "toggle(key(KEY_F).wait(100).key(KEY_SPACE).wait(100))",
+        "mapping_type": "key_macro"
+    }
+]

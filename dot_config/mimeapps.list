@@ -1,0 +1,33 @@
+[Added Associations]
+application/xml=micro.desktop;
+text/plain=nvim.desktop;micro-2.desktop;micro.desktop;
+x-scheme-handler/http=xfce4-web-browser.desktop;
+x-scheme-handler/https=xfce4-web-browser.desktop;
+application/x-shellscript=kitty-open.desktop;nvim.desktop;micro.desktop;
+application/x-zerosize=micro.desktop;nvim.desktop;
+application/pdf=org.pwmt.zathura-pdf-mupdf.desktop;libreoffice-draw.desktop;zen.desktop;
+image/jpeg=org.gnome.Loupe.desktop;com.github.PintaProject.Pinta.desktop;swayimg.desktop;swappy.desktop;org.pwmt.zathura-pdf-mupdf.desktop;
+image/png=org.gnome.Loupe.desktop;
+application/x-desktop=nvim.desktop;micro.desktop;
+application/octet-stream=micro.desktop;
+application/zip=org.gnome.FileRoller.desktop;org.pwmt.zathura-pdf-mupdf.desktop;thunar.desktop;
+text/x-csrc=micro.desktop;
+application/json=micro.desktop;
+application/vnd.microsoft.portable-executable=wine.desktop;
+text/csv=org.gnome.TextEditor.desktop;micro.desktop;
+text/css=nvim.desktop;
+application/vnd.oasis.opendocument.text=libreoffice-writer.desktop;org.pwmt.zathura-pdf-mupdf.desktop;
+
+[Default Applications]
+text/plain=nvim.desktop
+x-scheme-handler/http=xfce4-web-browser.desktop
+x-scheme-handler/https=xfce4-web-browser.desktop
+x-scheme-handler/discord=vesktop.desktop
+application/x-zerosize=nvim.desktop
+application/pdf=zen.desktop
+image/png=org.gnome.Loupe.desktop
+application/octet-stream=micro.desktop
+application/zip=org.gnome.FileRoller.desktop
+text/x-csrc=micro.desktop
+application/json=micro.desktop
+text/csv=micro.desktop

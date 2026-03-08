@@ -17,3 +17,9 @@ chsh -s $(which zsh)
 
 SUPER ALT . (blur, shadow, opacity)
 SUPER # (theme, wallpaper)
+
+# 4 SDDW Theme
+
+`sudo git clone -b master --depth 1 https://github.com/keyitdev/sddm-astronaut-theme.git /usr/share/sddm/themes/sddm-astronaut-theme`
+
+`sudo cp -r /usr/share/sddm/themes/sddm-astronaut-theme/Fonts/* /usr/share/fonts/`

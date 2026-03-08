@@ -55,8 +55,8 @@ export XCURSOR_THEME=Bibata-Modern-Classic
 export XCURSOR_SIZE=18 # Standardized to 24 (18 is very small for high DPI, adjust if needed)
 
 export TERMINAL=kitty
-export EDITOR=micro
-export VISUAL=micro
+export EDITOR=nvim
+export VISUAL=nvim
 
 # -----------------------------------------------------------------------------
 # 4. APP SPECIFIC FLAGS

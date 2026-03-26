@@ -1,0 +1,16 @@
+
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+
+gcom() {
+	git add .
+	git commit -m "$1"
+}
+
+lazyg() {
+	git add .
+	git commit -m "$1"
+	git push
+}
+
+alias install='sudo pacman -S '

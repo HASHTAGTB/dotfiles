@@ -178,8 +178,8 @@ output_path = '~/.config/matugen/generated/obsidian-theme.css'
 post_hook   = '''
 bash -c '
 {
-  mkdir -p "$HOME/Documents/pensive/.obsidian/snippets"
-  ln -nfs "$HOME/.config/matugen/generated/obsidian-theme.css" "$HOME/Documents/pensive/.obsidian/snippets/matugen-theme.css"
+  mkdir -p "/mnt/ntfs/HTB/Obsidian Vault/.obsidian/snippets"
+  ln -nfs "$HOME/.config/matugen/generated/obsidian-theme.css" "/mnt/ntfs/HTB/Obsidian Vault/.obsidian/snippets/matugen-theme.css"
 } >/dev/null 2>&1 </dev/null & disown
 '
 '''
@@ -283,3 +283,4 @@ output_path = '~/.config/micro/colorschemes/matugen.micro'
 [templates.pacseek]
 input_path = '~/.config/matugen/templates/pacseek_colors.json'
 output_path = '~/.config/pacseek/colors.json'
+

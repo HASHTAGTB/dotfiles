@@ -208,7 +208,7 @@ if [[ -n "$full_path" && -f "$full_path" ]]; then
         --transition-duration 2 \
         --transition-fps 60 </dev/null >/dev/null 2>&1 & disown
         
-    setsid uwsm-app -- matugen "${current_flags[@]}" image "$full_path" </dev/null >/dev/null 2>&1 & disown
+    setsid uwsm-app -- matugen "${current_flags[@]}" image "$full_path" --source-color-index 0 </dev/null >/dev/null 2>&1 & disown
 else
     rm -f "$CACHE_FILE" "$PATH_MAP"
     notify-send -a "Wallpaper Menu" "Path resolution failed. Cache cleared." -u critical

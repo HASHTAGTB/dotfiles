@@ -6,3 +6,6 @@ application/x-wine-extension-msp=wine-extension-msp.desktop;
 text/plain=micro-2.desktop;
 text/vbscript=wine-extension-vbs.desktop;
 text/x-ms-regedit=wine-extension-reg.desktop;
+x-scheme-handler/KongYingMap=wine-protocol-KongYingMap.desktop;
+x-scheme-handler/nxm=vortex-downloads-handler.desktop;
+x-scheme-handler/nxm-protocol=vortex-downloads-handler.desktop;

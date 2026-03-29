@@ -14,3 +14,4 @@ lazyg() {
 }
 
 alias install='sudo pacman -S '
+alias uninstall='sudo pacman -Rns '

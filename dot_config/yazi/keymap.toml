@@ -51,3 +51,29 @@ run = "plugin mount"
 on   = "l"
 run  = "plugin smart-enter"
 desc = "Enter the child directory, or open the file"
+
+[[mgr.prepend_keymap]]
+on = [ "g", "w" ]
+run = "cd /mnt/ntfs/"
+desc = "Go to ntfs Drive"
+
+[[mgr.prepend_keymap]]
+# on = ["R","b"]
+on = "R"
+run = "plugin recycle-bin"
+desc = "Open Recycle Bin menu"
+
+[[mgr.prepend_keymap]]
+on   = "+"
+run  = "plugin zoom 1"
+desc = "Zoom in hovered file"
+
+[[mgr.prepend_keymap]]
+on   = "-"
+run  = "plugin zoom -1"
+desc = "Zoom out hovered file"
+
+[[mgr.prepend_keymap]]
+on   = "T"
+run  = "plugin toggle-pane max-preview"
+desc = "Maximize or restore the preview pane"

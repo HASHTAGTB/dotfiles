@@ -30,7 +30,7 @@ readonly CORE_PACKAGES=(
 # Gnome
 "loupe" "gnome-calculator" "gnome-clocks"
 # Custom
-"zen-browser" "yay" "gnome-keyring"
+"zen-browser" "yay" "gnome-keyring" "trash-cli"
 )
 
 # ==============================================================================

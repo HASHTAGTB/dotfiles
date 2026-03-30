@@ -10,9 +10,9 @@ readonly CORE_PACKAGES=(
 # Hyprland
 "uwsm" "hyprpolkitagent"
 # GUI
-"nwg-look" "sddm" "qt5ct" "qt6ct" "qt6-svg" "qt6-multimedia-ffmpeg" "adw-gtk-theme" "matugen" "ttf-font-awesome" "ttf-jetbrains-mono-nerd" "noto-fonts-emoji"
+"nwg-look" "sddm" "qt5ct" "qt6ct" "adw-gtk-theme" "matugen" "ttf-font-awesome" "ttf-jetbrains-mono-nerd" "noto-fonts-emoji"
 # Desktop
-"waybar" "swww" "hyprlock" "hypridle" "hyprpicker" "swaync" "rofi" "libdbusmenu-qt5" "libdbusmenu-glib"
+"waybar" "swww" "hyprlock" "hypridle" "hyprpicker" "swaync" "rofi" "libdbusmenu-qt5"
 # Audio & Bluetooth
 "playerctl" "blueman" "pavucontrol" "gst-plugin-pipewire"
 # Filesystem
@@ -22,13 +22,15 @@ readonly CORE_PACKAGES=(
 # Terminal
 "kitty" "zsh-syntax-highlighting" "starship" "yazi" "gum" "zsh-autosuggestions" "libqalculate" "moreutils" "eza" "bat" "fd" "fzf" "ripgrep"
 # Development
-"neovim" "git-delta" "meson" "cmake" "clang" "uv" "rq" "jq" "bc" "viu" "chafa" "ueberzugpp" "ccache" "mold" "shellcheck" "shfmt" "stylua" "prettier" "tree-sitter-cli"
+"neovim" "git-delta" "meson" "cmake" "uv" "rq" "jq" "bc" "viu" "chafa" "ueberzugpp" "ccache" "mold" "shellcheck" "shfmt" "stylua" "prettier" "tree-sitter-cli" "zoxide"
 # Multimedia
-"mpv" "mpv-mpris" "swappy" "swayimg" "resvg" "imagemagick" "libheif" "ffmpegthumbnailer" "grim" "slurp" "wl-clipboard" "cliphist" "tesseract-data-eng"
+"mpv" "mpv-mpris" "swappy" "swayimg" "resvg" "imagemagick" "ffmpegthumbnailer" "grim" "slurp" "wl-clipboard" "cliphist" "tesseract-data-eng"
 # System
-"dgop" "nvtop" "gdu" "lshw" "wev" "libsecret" "seahorse" "yad" "dysk"
+"btop" "htop" "dgop" "nvtop" "gdu" "lshw" "wev" "seahorse" "yad" "dysk" "fastfetch" "pacman-contrib"
 # Gnome
 "loupe" "gnome-calculator" "gnome-clocks"
+# Fonts
+"noto-fonts" "noto-fonts-cjk" "ttf-liberation" "ttf-dejavu" "ttf-nerd-fonts-symbold-common" "otf-font-awesome"
 # Custom
 "zen-browser" "yay" "gnome-keyring" "trash-cli"
 )

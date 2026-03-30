@@ -8,13 +8,9 @@ set -euo pipefail
 # ==============================================================================
 readonly AUR_PACKAGES=(
   "wlogout"
-  "adwaita-qt6"
-  "adwaita-qt5"
-  "otf-atkinson-hyperlegible-next"
   "fluent-icon-theme-git"
   "hyprshade"
   "waypaper"
-  "tray-tui"
   "wifitui-bin"
   "xdg-terminal-exec"
   "pacseek-bin"

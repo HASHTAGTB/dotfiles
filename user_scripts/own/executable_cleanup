@@ -1,0 +1,34 @@
+#!/usr/bin/env bash
+
+echo "Starting interactive package audit..."
+echo "--------------------------------------"
+
+# Get all explicitly installed packages
+explicit_pkgs=$(pacman -Qeq)
+
+for pkg in $explicit_pkgs; do
+    # Check if anything requires this package
+    description=$(pacman -Qi "$pkg" | grep "Description" | cut -d: -f2 | xargs)
+    required_by=$(pacman -Qi "$pkg" | grep "Required By" | cut -d: -f2 | xargs)
+    optional_for=$(pacman -Qi "$pkg" | grep "Optional For" | cut -d: -f2 | xargs)
+
+    if [[ "$required_by" != "None" ]]; then
+        echo -e "\nPackage: \033[1;32m$pkg\033[0m"
+        echo "Description: $description"
+        echo "Required by: $required_by"
+        echo "Optional for: $optional_for"
+        
+        read -p "Mark '$pkg' as a dependency? [y/N]: " choice
+        case "$choice" in 
+            [yY][eE][sS]|[yY]) 
+                sudo pacman -D --asdeps "$pkg"
+                echo "Updated $pkg to 'installed as dependency'."
+                ;;
+            *)
+                echo "Skipping. $pkg remains 'explicitly installed'."
+                ;;
+        esac
+    fi
+done
+
+echo -e "\nAudit complete. Your 'pacman -Qeq' list is now much cleaner!"

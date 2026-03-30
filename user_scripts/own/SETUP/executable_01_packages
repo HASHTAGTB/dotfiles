@@ -1,0 +1,35 @@
+#!/usr/bin/env bash
+
+PACKAGE_FILE="~/.pkgfile"
+
+if [[ ! -f "$PACKAGE_FILE" ]]; then
+    echo "Error: $PACKAGE_FILE not found!"
+    exit 1
+fi
+
+# Create two temporary lists
+OFFICIAL_LIST=()
+AUR_LIST=()
+
+echo "Sorting packages from $PACKAGE_FILE..."
+
+while IFS= read -r pkg; do
+    # Check if package exists in official repos
+    if pacman -Si "$pkg" &> /dev/null; then
+        OFFICIAL_LIST+=("$pkg")
+    else
+        AUR_LIST+=("$pkg")
+    fi
+done < "$PACKAGE_FILE"
+
+# Install Official Packages
+if [[ ${#OFFICIAL_LIST[@]} -gt 0 ]]; then
+    echo "Installing official packages via pacman..."
+    sudo pacman -S --needed --noconfirm "${OFFICIAL_LIST[@]}"
+fi
+
+# Install AUR Packages
+if [[ ${#AUR_LIST[@]} -gt 0 ]]; then
+    echo "Installing AUR packages via yay..."
+    yay -S --needed --noconfirm "${AUR_LIST[@]}"
+fi

@@ -38,15 +38,15 @@ if ! command -v notify-send &>/dev/null; then
     exit 1
 fi
 
-for cmd in magick rofi swww uwsm-app matugen; do
+for cmd in magick rofi awww uwsm-app matugen; do
     if ! command -v "$cmd" &>/dev/null; then
         notify-send -a "Wallpaper Menu" "Missing dependency: $cmd" -u critical
         exit 1
     fi
 done
 
-if ! swww query &>/dev/null; then
-    notify-send -a "Wallpaper Menu" "swww daemon is not running." -u critical
+if ! awww query &>/dev/null; then
+    notify-send -a "Wallpaper Menu" "awww daemon is not running." -u critical
     exit 1
 fi
 
@@ -203,7 +203,7 @@ if [[ -n "$full_path" && -f "$full_path" ]]; then
     fi
 
     # Consistent background execution
-    swww img "$full_path" \
+    awww img "$full_path" \
         --transition-type grow \
         --transition-duration 2 \
         --transition-fps 60 </dev/null >/dev/null 2>&1 & disown

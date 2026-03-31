@@ -8,7 +8,7 @@ play = [
 	{ run = "mpv %s", orphan = true }
 ]
 play_exe = [
-	{ run = 'wine "$@"', desc = "Wine", for = "unix" }
+	{ run = 'wine "$@"', orphan = true, desc = "Wine", for = "unix" }
 ]
 
 [open]

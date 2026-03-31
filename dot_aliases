@@ -15,3 +15,8 @@ lazyg() {
 
 alias install='sudo pacman -S '
 alias uninstall='sudo pacman -Rns '
+
+alias cd='z '
+alias ls='eza '
+alias grep='rg '
+alias find='fd '

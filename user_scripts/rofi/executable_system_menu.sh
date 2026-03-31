@@ -10,7 +10,7 @@ set -uo pipefail
 readonly SCRIPTS_DIR="${HOME}/user_scripts"
 readonly HYPR_CONF="${HOME}/.config/hypr"
 readonly HYPR_SOURCE="${HYPR_CONF}/source"
-readonly SEARCH_DIR="${HOME}/Documents/pensive/linux"
+readonly SEARCH_DIR="${HOME}/Documents/Text/"
 
 readonly TERMINAL="kitty"
 readonly EDITOR="${EDITOR:-nvim}"

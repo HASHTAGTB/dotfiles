@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-PACKAGE_FILE="~/.pkgfile"
+PACKAGE_FILE="~/.pkglist"
 
 if [[ ! -f "$PACKAGE_FILE" ]]; then
     echo "Error: $PACKAGE_FILE not found!"

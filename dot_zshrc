@@ -12,3 +12,5 @@ source /usr/share/cachyos-zsh-config/cachyos-config.zsh
 [[ ! -f ~/.aliases ]] || source ~/.aliases
 
 eval "$(zoxide init zsh)"
+
+. "$HOME/.local/share/../bin/env"

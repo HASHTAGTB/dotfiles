@@ -4,16 +4,85 @@
 linemode = "size"
 
 [opener]
-play = [
-	{ run = "mpv %s", orphan = true }
+edit = [
+	{ run = "${EDITOR:-vi} %s", desc = "Editor",      for = "unix", block = true },
+	{ run = "code %s",          desc = "code",         for = "windows", orphan = true },
+	{ run = "code -w %s",       desc = "code (block)", for = "windows", block = true },
 ]
-play_exe = [
+play = [
+	{ run = "mpv %s",    desc = "Play", for = "linux", orphan = true },
+	# { run = "xdg-open %s1",    desc = "Play", for = "linux", orphan = true },
+	{ run = "open %s",         desc = "Play", for = "macos" },
+	{ run = 'start "" %s1',    desc = "Play", for = "windows", orphan = true },
+	{ run = "termux-open %s1", desc = "Play", for = "android" },
+	{ run = "mediainfo %s1; echo 'Press enter to exit'; read _", block = true, desc = "Show media info", for = "unix" },
+	{ run = "mediainfo %s1 & pause", block = true, desc = "Show media info", for = "windows" },
+]
+open = [
+	{ run = "xdg-open %s1",    desc = "Open", for = "linux" },
+	{ run = "open %s",         desc = "Open", for = "macos" },
+	{ run = 'start "" %s1',    desc = "Open", for = "windows", orphan = true },
+	{ run = "termux-open %s1", desc = "Open", for = "android" },
+]
+view = [
+	{ run = "loupe %s",    desc = "Image Viewer", for = "linux", orphan = true },
+	{ run = "pinta %s",    desc = "Pinta", for = "linux", orphan = true },
+	{ run = "gimp %s",    desc = "Gimp", for = "linux", orphan = true },
+	{ run = "krita %s",    desc = "Krita", for = "linux", orphan = true },
+	{ run = "open %s",         desc = "Open", for = "macos" },
+	{ run = 'start "" %s1',    desc = "Open", for = "windows", orphan = true },
+	{ run = "termux-open %s1", desc = "Open", for = "android" },
+]
+reveal = [
+	{ run = "ya emit reveal %s1",         desc = "Yazi", for = "linux"},
+	{ run = "thunar %s1",         desc = "Thunar", for = "linux", orphan = true },
+	{ run = "open -R %s1",          desc = "Reveal", for = "macos" },
+	{ run = "explorer /select,%s1", desc = "Reveal", for = "windows", orphan = true },
+	{ run = "termux-open %d1",      desc = "Reveal", for = "android" },
+	{ run = "clear; exiftool %s1; echo 'Press enter to exit'; read _", desc = "Show EXIF", for = "unix", block = true },
+]
+extract = [
+	{ run = "ya pub extract --list %s", desc = "Extract here" },
+]
+download = [
+	{ run = "ya emit download --open %S", desc = "Download and open" },
+	{ run = "ya emit download %S",        desc = "Download" },
+]
+wine = [
 	{ run = 'wine "$@"', orphan = true, desc = "Wine", for = "unix" }
+]
+run = [
+	{ run = "%s1", orphan = true, desc = "Run", for = "unix" }
+]
+pdf = [
+	{ run = "${BROWSER:-zen-browser} %s", orphan = true, desc = "Browser", for = "unix" },
+	{ run = "zathura %s", orphan = true, desc = "Zathura", for = "unix" }
 ]
 
 [open]
-prepend_rules = [
-	{ url = "*.exe", use = "play_exe" }
+rules = [
+	{ url = "*.exe", use = [ "wine", "reveal" ] },
+	{ url = "*.pdf", use = [ "pdf", "reveal" ] },
+	{ mime = "*/shellscript", use = [ "edit", "run" , "reveal"]},
+	# Folder
+	{ url = "*/", use = [ "edit", "reveal" ] },
+	# Text
+	{ mime = "text/*", use = [ "edit", "reveal" ] },
+	# Image
+	{ mime = "image/*", use = [ "view", "reveal" ] },
+	# Media
+	{ mime = "{audio,video}/*", use = [ "play", "reveal" ] },
+	# Archive
+	{ mime = "application/{zip,rar,7z*,tar,gzip,xz,zstd,bzip*,lzma,compress,archive,cpio,arj,xar,ms-cab*}", use = [ "extract", "reveal" ] },
+	# JSON
+	{ mime = "application/{json,ndjson}", use = [ "edit", "reveal" ] },
+	{ mime = "*/javascript", use = [ "edit", "reveal" ] },
+	# Empty file
+	{ mime = "inode/empty", use = [ "edit", "reveal" ] },
+	# Virtual file system
+	{ mime = "vfs/{absent,stale}", use = "download" },
+	# Fallback
+	{ url = "*", use = [ "edit", "reveal" ] },
 ]
 
 [preview]

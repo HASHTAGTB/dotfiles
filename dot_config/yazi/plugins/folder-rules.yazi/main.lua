@@ -3,6 +3,8 @@ local function setup()
 		local cwd = cx.active.current.cwd
 		if cwd:ends_with("Downloads") then
 			opt.by, opt.reverse, opt.dir_first = "mtime", true, false
+		elseif cwd:ends_with("Trash/files") then
+			opt.by, opt.reverse, opt.dir_first = "mtime", true, false
 		else
 			opt.by, opt.reverse, opt.dir_first = "natural", false, true
 		end

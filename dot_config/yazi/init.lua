@@ -1,6 +1,8 @@
 require("folder-rules"):setup()
 require("recycle-bin"):setup()
 -- ~/.config/yazi/init.lua
+require("relative-motions"):setup({ show_numbers = "relative", show_motion = true })
+-- ~/.config/yazi/init.lua
 function Linemode:size_and_mtime()
 	local time = math.floor(self._file.cha.mtime or 0)
 	if time == 0 then

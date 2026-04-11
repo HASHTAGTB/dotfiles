@@ -75,6 +75,10 @@ require('lazy').setup({
 
   { import = 'custom.plugins.ui' },
 
+  { import = 'custom.plugins.flutter-tools' },
+
+  { import = 'custom.plugins.renpy' },
+
   -- import every plugin from lua/custom/plugins/auto
   { import = 'custom.plugins.auto' },
 
